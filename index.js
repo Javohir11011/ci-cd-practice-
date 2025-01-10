@@ -1,3 +1,16 @@
-import { express } from "express";
+import express from "express";
 
-console.log("Salom dunyo...");
+const app = express();
+app.use(express.json())
+
+app.use('/test', (req, res) => {
+  res.send("test 1 completed")
+})
+
+app.use('/test2', (req, res) => {
+  res.send("test 1 completed")
+})
+
+app.listen(1111, () => {
+  console.log("server running in 1111 port");
+});
